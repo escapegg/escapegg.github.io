@@ -1,1 +1,0 @@
-jade --pretty --no-debug -o "../" index.jade
