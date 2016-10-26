@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import '../public/vendor/bootstrap/css/bootstrap.css';
 import './index.css';
-import TeamImage from './TeamImage'
+import './css/agency.css';
+import './css/nav.css';
+import Content from './Content';
 
 ReactDOM.render(
-  <TeamImage />,
+  <Content />,
   document.getElementById('root')
 );

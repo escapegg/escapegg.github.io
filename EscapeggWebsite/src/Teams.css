@@ -1,0 +1,16 @@
+div.slick-list {
+  height: 956px;
+}
+div.slick-track {
+  height: 956px;
+}
+div.slick-track container.slick-slide#Dota {
+  height: 956px;
+  background-image: url("../public/img/teams/dota.jpg");
+  background-size: 100%;
+}
+div.slick-track container.slick-slide#Hearthstone {
+  height: 956px;
+  background-image: url("../public/img/teams/csgo.jpg");
+  background-size: 100%;
+}

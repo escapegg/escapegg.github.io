@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <link href="/public/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -28,5 +34,23 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src='/js/agency.js'></script>
+    <script src='/vendor/jquery/jquery.js'></script>
+    <script src='/vendor/bootstrap/bootstrap.js'></script>
+    <script>
+      $(function() {
+          var sm = $('.sm-slide').data('smartmenus');
+          if (!!sm) {
+              sm.opts.hideFunction = function($ul, complete) { alert: 'yes'; $ul.slideUp(500, complete); };
+              sm.opts.showFunction = function($ul, complete) { alert: 'yes'; $ul.slideDown(500, complete); };
+              sm.opts.subMenusMaxWidth = '';
+              sm.opts.showTimeout = 100;
+              sm.opts.hideTimeout = 750;
+          }
+      });
+    </script>
+
   </body>
 </html>
