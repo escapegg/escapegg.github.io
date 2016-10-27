@@ -5,6 +5,7 @@ import '../public/vendor/bootstrap/css/bootstrap.css';
 import './index.css';
 import './css/agency.css';
 import './css/nav.css';
+import './css/mixins.css';
 import Content from './Content';
 
 ReactDOM.render(

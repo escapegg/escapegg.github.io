@@ -16,9 +16,9 @@ class Nav extends Component {
                     <ul className="nav navbar-nav navbar-right">
                         <li className="hidden"><a href="#page-top"></a></li>
                         <li><a href="#teams" className="page-scroll">The Teams</a></li>
-                        <li>   <a href="#news" className="page-scroll">News</a></li>
-                        <li><a href="#calander" className="page-scroll">Calander</a></li>
-                        <li><a href="#shop" className="page-scroll">Swag</a></li>
+                        <li>   <a href="#TwitterFeed" className="page-scroll">News</a></li>
+                        <li><a href="#Events" className="page-scroll">Calander</a></li>
+                        <li><a href="#Swag" className="page-scroll">Swag</a></li>
                         <li><a href="#sponsors" className="page-scroll">Sponsors</a></li>
                     </ul>
                 </div>

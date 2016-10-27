@@ -9,9 +9,11 @@ import TeamHover from './TeamHover'
 class TeamImage extends Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
       infinite: true,
-      speed: 500,
+      speed: 5,
       slidesToShow: 1,
       slidesToScroll: 1
     };
