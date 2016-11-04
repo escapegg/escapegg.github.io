@@ -1,19 +1,40 @@
 @height: 956px;
 
 div.slick-list {
-    height: @height;
+    height: auto;
 }
 
 div.slick-track {
-    height: @height;
+    height: auto;
+    div.player img {
+        max-width: 100%;
+    }
     container.slick-slide#Dota {
-        height: @height;
-        background-image: url("../public/img/teams/dota.jpg");
+        position:relative;
+        display:inline-block;
+        height: auto;
         background-size:100%;
+
     }
     container.slick-slide#Hearthstone {
-        height: @height;
-        background-image: url("../public/img/teams/csgo.jpg");
+        height: auto;
         background-size:100%;
+    }
+
+    div.popup {
+        padding-top: 10px;
+        width: 195px;
+        height: 195px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 80%;
+        background-color: #222;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+    }
+
+    div.popup.hidden {
+        display: none;
     }
 } 

@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Slider from 'react-slick';
 import './Teams.css';
-import TeamHover from './TeamHover'
+import TeamImage from './TeamImage'
 
 
 class TeamSlider extends Component {
@@ -11,15 +11,72 @@ class TeamSlider extends Component {
     var settings = {
       dots: false,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       infinite: true,
-      speed: 5,
+      speed: 500,
+      adaptiveHeight: true,
       slidesToShow: 1,
       slidesToScroll: 1
     };
     
-    var dotaTeam = {name : "Dota", players : ["Marek","Jake"]};
-    var hearthstoneTeam = {name : "Hearthstone", players : ["Jammie"]};
+    var dotaTeam = {
+      name : "Dota", 
+      players : [
+        {
+          name: "Marek",
+          handle: "KlavenX",
+          country: "", //Will be a path to a flag image.
+          twitterUrl: "", //twitter page url
+          twitchUrl: "", //twitch page url,
+          facebookUrl: "" //facebook page url
+        },
+        {
+          name: "Jake",
+          handle: "JakeX",
+          country: "", //Will be a path to a flag image.
+          twitterUrl: "", //twitter page url
+          twitchUrl: "", //twitch page url,
+          facebookUrl: "" //facebook page url
+        },
+        {
+          name: "Scott",
+          handle: "Dark",
+          country: "", //Will be a path to a flag image.
+          twitterUrl: "", //twitter page url
+          twitchUrl: "", //twitch page url,
+          facebookUrl: "" //facebook page url
+        },
+        {
+          name: "Alex",
+          handle: "Victain264",
+          country: "", //Will be a path to a flag image.
+          twitterUrl: "", //twitter page url
+          twitchUrl: "", //twitch page url,
+          facebookUrl: "" //facebook page url
+        },
+        {
+          name: "Derek",
+          handle: "PooWillyPeeBum",
+          country: "", //Will be a path to a flag image.
+          twitterUrl: "", //twitter page url
+          twitchUrl: "", //twitch page url,
+          facebookUrl: "" //facebook page url
+        }],
+      image: '/img/teams/dota.jpg'
+    };
+    var hearthstoneTeam = {
+      name : "Hearthstone", 
+      players : [,
+        {
+          name: "Chris",
+          handle: "Chrispy",
+          country: "", //Will be a path to a flag image.
+          twitterUrl: "", //twitter page url
+          twitchUrl: "", //twitch page url,
+          facebookUrl: "" //facebook page url
+        }],
+      image: '/img/teams/Hearthstone.jpg'
+    };
 
     var teams = [];
     teams.push(dotaTeam);
@@ -28,7 +85,7 @@ class TeamSlider extends Component {
     
     var teamDivs = teams.map((team) =>
       <container id={team.name}>
-        <h1> {team.name} </h1>
+        <TeamImage team={team}/>
       </container>
     )
 
