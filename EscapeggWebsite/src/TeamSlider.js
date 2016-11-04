@@ -75,7 +75,7 @@ class TeamSlider extends Component {
           twitchUrl: "", //twitch page url,
           facebookUrl: "" //facebook page url
         }],
-      image: '/img/teams/Hearthstone.jpg'
+      image: '/img/teams/hearthstone.jpg'
     };
 
     var teams = [];

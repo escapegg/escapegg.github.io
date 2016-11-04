@@ -18,7 +18,7 @@ class TeamImage extends Component {
     )
 
     return (
-      <div className="player">
+      <div className="team">
         <img src={this.props.team.image}/>
         {playerDivs}
       </div>
