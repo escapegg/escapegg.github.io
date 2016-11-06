@@ -23,7 +23,7 @@ class Player extends Component {
 
   render() {
     return (
-      <div className="player" style={{marginLeft: this.state.player.location+"%"}}>
+      <div className="player" style={{left: ((this.state.player.locationMin+this.state.player.locationMax)/2)+"%"}}>
       </div>
     );
   }
