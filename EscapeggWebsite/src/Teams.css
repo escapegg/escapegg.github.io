@@ -17,7 +17,7 @@ div.slick-track container.slick-slide#Hearthstone {
   height: auto;
   background-size: 100%;
 }
-div.slick-track div.popup {
+div.slick-track div.player {
   padding-top: 10px;
   width: 195px;
   height: 195px;

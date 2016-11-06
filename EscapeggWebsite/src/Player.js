@@ -4,30 +4,28 @@ import './Teams.css';
 
 
 class Player extends Component {
-getInitialState() {
-    return {hover:false};
-}
 
-mouseOut() {
-    this.setState({hover:false});
-}
+  constructor(props) {
+    super(props);
+    this.state = {
+      hover: false,
+      player: props.player
+    }
+  }
 
-mouseOver() {
-    this.setState({hover:true});
-}
+  mouseOut() {
+      this.setState({hover:false});
+  }
+
+  mouseOver() {
+      this.setState({hover:true});
+  }
 
   render() {
- 
-    //const teams = [{name : "Dota", players : ["Marek","Jake","Milk"]},{name : "Hearthstone", players : ["Bob","Grafiti"]}];
-
     return (
-      <div className="player">
-        <img src={this.props.team.image}/>
-        {playerDivs}
+      <div className="player" style={{marginLeft: this.state.player.location+"%"}}>
       </div>
     );
-
   }
 }
-
 export default Player;

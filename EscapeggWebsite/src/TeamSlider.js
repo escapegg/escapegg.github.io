@@ -28,7 +28,8 @@ class TeamSlider extends Component {
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
           twitchUrl: "", //twitch page url,
-          facebookUrl: "" //facebook page url
+          facebookUrl: "", //facebook page url
+          location: 10
         },
         {
           name: "Jake",
@@ -36,7 +37,8 @@ class TeamSlider extends Component {
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
           twitchUrl: "", //twitch page url,
-          facebookUrl: "" //facebook page url
+          facebookUrl: "", //facebook page url
+          location: 25
         },
         {
           name: "Scott",
@@ -44,7 +46,8 @@ class TeamSlider extends Component {
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
           twitchUrl: "", //twitch page url,
-          facebookUrl: "" //facebook page url
+          facebookUrl: "", //facebook page url
+          location: 50
         },
         {
           name: "Alex",
@@ -52,7 +55,8 @@ class TeamSlider extends Component {
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
           twitchUrl: "", //twitch page url,
-          facebookUrl: "" //facebook page url
+          facebookUrl: "", //facebook page url
+          location: 70
         },
         {
           name: "Derek",
@@ -60,7 +64,8 @@ class TeamSlider extends Component {
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
           twitchUrl: "", //twitch page url,
-          facebookUrl: "" //facebook page url
+          facebookUrl: "", //facebook page url
+          location: 90
         }],
       image: '/img/teams/dota.jpg'
     };
@@ -73,7 +78,8 @@ class TeamSlider extends Component {
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
           twitchUrl: "", //twitch page url,
-          facebookUrl: "" //facebook page url
+          facebookUrl: "", //facebook page url
+          location: 50
         }],
       image: '/img/teams/hearthstone.jpg'
     };
