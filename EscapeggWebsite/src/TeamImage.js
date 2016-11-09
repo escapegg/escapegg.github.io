@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './Teams.css';
 import Player from './Player';
+import ResizeWraper from './ResizeWrapper';
 
 
 class TeamImage extends Component {
@@ -12,6 +13,10 @@ class TeamImage extends Component {
     this.onMouseOut = this.onMouseOut.bind(this);
     this.onRef = this.onRef.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.componentDidUpdate = this.componentDidUpdate.bind(this);
+    this.componentWillUpdate = this.componentWillUpdate.bind(this);
     this.state = {
       hover: false,
       location: 0,
@@ -19,9 +24,33 @@ class TeamImage extends Component {
       width: 0
     }
   }
+  
+  componentDidMount() {
+  }
+
+  componentDidUpdate() {
+    console.log("Something");
+  }
+
+  componentWillUpdate() {
+    console.log("componentWillUpdate");
+  }
+
+  componentWillUnmount() {
+     }
+
+  handleResize(event) {
+    console.log("MadeItHere");
+    console.log(event);
+    this.setState(prev => ({
+      hover: prev.hover,
+      location: prev.location,
+      player: prev.player,
+      width: event.srcElement.innerWidth
+    }))
+  }
 
   onMouseOut(event) {
-    console.log("-out-");
     this.setState(prevState => ({
       hover: false,
       location: 0,
@@ -31,8 +60,6 @@ class TeamImage extends Component {
   }
 
   onMouseMove(event) {
-    console.log("------------++++++++++++++++==============++++++++++++++++++----------------");
-    console.log(event.clientX);
     var x = event.clientX;
     this.setState(prevState => ({
       hover: true,
@@ -43,8 +70,6 @@ class TeamImage extends Component {
   }
 
   onHoverOverPlayer(event) {
-    console.log("------------++++++++++++++++==============++++++++++++++++++----------------");
-    console.log(event.clientX);
     var x = event.clientX;
     this.setState(prevState => ({
       hover: true,
@@ -65,11 +90,8 @@ class TeamImage extends Component {
 
   render() {  
  
-    //const teams = [{name : "Dota", players : ["Marek","Jake","Milk"]},{name : "Hearthstone", players : ["Bob","Grafiti"]}];
-    
     var playerDivs = this.props.team.players.map((playerDef) =>
       {
-        console.log((this.state.location/this.state.width)*100);
         var xpercent = ((this.state.location/this.state.width)*100);
       if(
         xpercent < playerDef.locationMax && xpercent > playerDef.locationMin) {
@@ -86,8 +108,10 @@ class TeamImage extends Component {
 
     return (
       <div className="team" onMouseOver={this.onHoverOverPlayer} onMouseOut={this.onMouseOut} ref={this.onRef} onMouseMove={this.onMouseMove}>
-        <img src={this.props.team.image}/>
-        {this.state.hover ? playerDivs : ''}
+        <ResizeWraper onWindowResize={this.handleResize}>
+          <img src={this.props.team.image}/>
+          {this.state.hover ? playerDivs : ''}
+        </ResizeWraper>
       </div>
     );
 
