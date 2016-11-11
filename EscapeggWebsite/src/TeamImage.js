@@ -21,7 +21,8 @@ class TeamImage extends Component {
       hover: false,
       location: 0,
       player: props.player,
-      width: 0
+      width: 0,
+      xpercent: 0
     }
   }
   
@@ -37,7 +38,8 @@ class TeamImage extends Component {
   }
 
   componentWillUnmount() {
-     }
+
+  }
 
   handleResize(event) {
     console.log("MadeItHere");
@@ -46,7 +48,8 @@ class TeamImage extends Component {
       hover: prev.hover,
       location: prev.location,
       player: prev.player,
-      width: event.srcElement.innerWidth
+      width: event.srcElement.innerWidth,
+      xpercent: ((prev.location/event.srcElement.innerWidth)*100)
     }))
   }
 
@@ -55,7 +58,8 @@ class TeamImage extends Component {
       hover: false,
       location: 0,
       player: prevState.player,
-      widht: prevState.width
+      widht: prevState.width,
+      xpercent: 0
     }));
   }
 
@@ -65,7 +69,8 @@ class TeamImage extends Component {
       hover: true,
       location: x,
       player: prevState.player,
-      width: prevState.width
+      width: prevState.width,
+      xpercent: ((x/prevState.width*100))
     }));
   }
 
@@ -75,7 +80,8 @@ class TeamImage extends Component {
       hover: true,
       location: x,
       player: prevState.player,
-      width: prevState.width
+      width: prevState.width,
+      xpercent: ((x/prevState.width)*100)
     }));
   }
 
@@ -84,7 +90,8 @@ class TeamImage extends Component {
       hover: true,
       location: prevState.location,
       player: prevState.player,
-      width: settings.clientWidth
+      width: settings.clientWidth,
+      xpercent: ((prevState.location/settings.clientWidth)*100)
     }));
   }
 
@@ -93,16 +100,11 @@ class TeamImage extends Component {
     var playerDivs = this.props.team.players.map((playerDef) =>
       {
         var xpercent = ((this.state.location/this.state.width)*100);
-      if(
-        xpercent < playerDef.locationMax && xpercent > playerDef.locationMin) {
         return (
           <div key={playerDef.name}>
-            <Player player={playerDef} />
+            <Player player={playerDef} mousePosition={this.state.xpercent}/>
           </div>
         )
-      } else {
-        return null;
-      }
       }
     )
 
@@ -110,7 +112,7 @@ class TeamImage extends Component {
       <div className="team" onMouseOver={this.onHoverOverPlayer} onMouseOut={this.onMouseOut} ref={this.onRef} onMouseMove={this.onMouseMove}>
         <ResizeWraper onWindowResize={this.handleResize}>
           <img src={this.props.team.image}/>
-          {this.state.hover ? playerDivs : ''}
+          {playerDivs}
         </ResizeWraper>
       </div>
     );

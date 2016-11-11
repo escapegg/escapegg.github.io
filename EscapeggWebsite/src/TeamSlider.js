@@ -10,7 +10,7 @@ class TeamSlider extends Component {
   render() {
     var settings = {
       dots: false,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 5000,
       infinite: true,
       speed: 500,

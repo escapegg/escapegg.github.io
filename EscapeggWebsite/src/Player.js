@@ -9,21 +9,31 @@ class Player extends Component {
     super(props);
     this.state = {
       hover: false,
-      player: props.player
+      player: props.player,
+      xposition: props.mousePosition
     }
   }
 
-  mouseOut() {
-      this.setState({hover:false});
+  onMouseOut(event) {
+    console.log("here")
   }
 
-  mouseOver() {
-      this.setState({hover:true});
+  onMouseMove(event) {
+    console.log("here")
+  }
+  onHoverOverPlayer(event) {
+    console.log("here")
   }
 
   render() {
     return (
-      <div className="player" style={{left: ((this.state.player.locationMin+this.state.player.locationMax)/2)+"%"}}>
+      <div className="player" 
+        style={
+          {
+            left: ((this.state.player.locationMin+this.state.player.locationMax)/2)+"%", 
+            display: (this.state.player.locationMin < this.props.mousePosition && this.props.mousePosition < this.state.player.locationMax) ? 'inline-block' : 'none' 
+          }
+        }>
       </div>
     );
   }
