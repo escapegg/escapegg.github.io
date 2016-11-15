@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 
 class Footer extends Component {
@@ -8,7 +6,7 @@ class Footer extends Component {
 
     return (
         <div id="Footer">
-            <h> Awesome footer with contact info. </h>
+            <h> ESCAPE GAMING GmbH - Copyright 2016 </h>
         </div>
     );
 

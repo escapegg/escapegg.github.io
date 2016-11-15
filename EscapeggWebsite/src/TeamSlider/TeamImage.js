@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import './Teams.css';
 import Player from './Player';
-import ResizeWraper from './ResizeWrapper';
+import ResizeWraper from '../Utils/ResizeWrapper';
 
 
 class TeamImage extends Component {
@@ -14,9 +12,6 @@ class TeamImage extends Component {
     this.onRef = this.onRef.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
-    this.componentDidUpdate = this.componentDidUpdate.bind(this);
-    this.componentWillUpdate = this.componentWillUpdate.bind(this);
     this.state = {
       hover: false,
       location: 0,
@@ -26,21 +21,6 @@ class TeamImage extends Component {
     }
   }
   
-  componentDidMount() {
-  }
-
-  componentDidUpdate() {
-    console.log("Something");
-  }
-
-  componentWillUpdate() {
-    console.log("componentWillUpdate");
-  }
-
-  componentWillUnmount() {
-
-  }
-
   handleResize(event) {
     console.log("MadeItHere");
     console.log(event);

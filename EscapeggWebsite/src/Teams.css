@@ -1,24 +1,23 @@
 div.slick-list {
-  height: auto;
+  min-height: 0;
+  min-width: 0;
 }
 div.slick-track {
-  height: auto;
+  min-height: 0;
+  min-width: 0;
 }
 div.slick-track div.team img {
   max-width: 100%;
 }
-div.slick-track container.slick-slide#Dota {
+div.slick-track container.slick-slide {
   position: relative;
-  display: inline-block;
-  height: auto;
-  background-size: 100%;
-}
-div.slick-track container.slick-slide#Hearthstone {
-  height: auto;
+  display: block;
   background-size: 100%;
 }
 div.slick-track div.player {
   padding-top: 10px;
+  color: white;
+  display: block;
   width: 195px;
   height: 195px;
   margin: 0 auto;
@@ -29,6 +28,52 @@ div.slick-track div.player {
   bottom: 2%;
   left: 0;
 }
-div.slick-track div.popup.hidden {
-  display: none;
+div.slick-track div.player a {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background-size: 34px;
+  display: block;
+}
+div.slick-track div.player a.twitter {
+  background-image: url("../public/img/twitter.jpg");
+}
+div.slick-track div.player a.twitch {
+  background-image: url("../public/img/twitch.jpg");
+}
+div.slick-track div.player h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+div.slick-track div.player h5 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Hind;
+  margin: 0;
+  letter-spacing: 2px;
+}
+div.slick-track div.player ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+div.slick-track div.player ul li {
+  display: inline-block;
+  text-align: center;
+  list-style-type: none;
+}
+div.slick-track div.player ul li a {
+  display: block;
+  padding: 5px;
+  background-color: #5b5b5b;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in;
 }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
-import './Teams.css';
 
 
 class Player extends Component {
@@ -30,10 +28,14 @@ class Player extends Component {
       <div className="player" 
         style={
           {
-            left: ((this.state.player.locationMin+this.state.player.locationMax)/2)+"%", 
+            left: (((this.state.player.locationMin+this.state.player.locationMax)/2)-7)+"%", 
             display: (this.state.player.locationMin < this.props.mousePosition && this.props.mousePosition < this.state.player.locationMax) ? 'inline-block' : 'none' 
           }
         }>
+        <h> {this.props.player.firstname + " \"" + this.props.player.handle + "\" " + this.props.player.lastname} </h>
+        <a className="twitter" herf={this.props.player.twitterUrl}></a>
+        <a className="twitch" herf={this.props.player.twitchUrl}></a>
+
       </div>
     );
   }

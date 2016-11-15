@@ -14,23 +14,20 @@ class ResizeWrapper extends Component {
     componentDidMount() {
         this.resizeElement.addEventListener("resize", this.handleResize);
         window.addEventListener("resize", this.handleResize);
-        console.log("BILABOBOBOBOBOBOBOBOBOBOBOBOBOB:ELRJE:LRJERHERELRHE:LRHJ");
     }
 
     componentWillUnmount() {
         this.resizeElement.removeEventListener("resize", this.handleResize);
-        console.log("THEREHREHRHERHEHREHRHERHEHREHRHR:ELRJE:LRJERHERELRHE:LRHJ");
     }
 
     onRef(r) {
         this.resizeElement = r;
-        console.log("HEREEHRHERHEHREHRHER:ELRJE:LRJERHERELRHE:LRHJ");
     }
 
     render() {
         return (
             <div ref={this.onRef}>
-                {this.props.children};
+                {this.props.children}
             </div>
         )
     }

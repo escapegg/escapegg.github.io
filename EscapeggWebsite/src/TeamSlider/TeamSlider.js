@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 import Slider from 'react-slick';
-import './Teams.css';
+import '../Teams.css';
 import TeamImage from './TeamImage'
 
 
@@ -10,66 +9,73 @@ class TeamSlider extends Component {
   render() {
     var settings = {
       dots: false,
-      autoplay: false,
-      autoplaySpeed: 5000,
+      autoplay: true,
+      autoplaySpeed: 10000,
       infinite: true,
       speed: 500,
-      adaptiveHeight: true,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      initialSlide: 0,
+      lazyLoad: false,
+      pauseOnHover: true,
     };
     
     var dotaTeam = {
       name : "Dota", 
       players : [
         {
-          name: "Marek",
+          firstname: "Marek",
+          lastname: "Counts",
           handle: "KlavenX",
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
-          twitchUrl: "", //twitch page url,
+          twitchUrl: "https://www.twitch.tv/klavenx", //twitch page url,
           facebookUrl: "", //facebook page url
           locationMin: 0,
-          locationMax: 20
+          locationMax: 18
         },
         {
-          name: "Jake",
+          firstname: "Jake",
+          lastname: "Ramsy",
           handle: "JakeX",
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
-          twitchUrl: "", //twitch page url,
+          twitchUrl: "https://www.twitch.tv/klavenx", //twitch page url,
           facebookUrl: "", //facebook page url
-          locationMin: 20,
-          locationMax: 35
+          locationMin: 18,
+          locationMax: 37
         },
         {
-          name: "Scott",
+          firstname: "Scott",
+          lastname: "poopooface",
           handle: "Dark",
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
-          twitchUrl: "", //twitch page url,
+          twitchUrl: "https://www.twitch.tv/klavenx", //twitch page url,
           facebookUrl: "", //facebook page url
-          locationMin: 35,
+          locationMin: 37,
           locationMax: 55
         },
         {
-          name: "Alex",
+          firstname: "Alex",
+          lastname: "Frydell",
           handle: "Victain264",
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
-          twitchUrl: "", //twitch page url,
+          twitchUrl: "https://www.twitch.tv/klavenx", //twitch page url,
           facebookUrl: "", //facebook page url
           locationMin: 57,
-          locationMax: 67
+          locationMax: 73
         },
         {
-          name: "Derek",
+          firstname: "Derek",
+          lastname: "Shoemaker",
           handle: "PooWillyPeeBum",
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
-          twitchUrl: "", //twitch page url,
+          twitchUrl: "https://www.twitch.tv/klavenx", //twitch page url,
           facebookUrl: "", //facebook page url
-          locationMin: 67,
+          locationMin: 73,
           locationMax: 92
         }],
       image: '/img/teams/dota.jpg'
@@ -78,11 +84,12 @@ class TeamSlider extends Component {
       name : "Hearthstone", 
       players : [,
         {
-          name: "Chris",
+          firstname: "Chris",
+          lastname: "Raydell",
           handle: "Chrispy",
           country: "", //Will be a path to a flag image.
           twitterUrl: "", //twitter page url
-          twitchUrl: "", //twitch page url,
+          twitchUrl: "https://www.twitch.tv/klavenx", //twitch page url,
           facebookUrl: "", //facebook page url
           locationMin: 40,
           locationMax: 60
@@ -93,7 +100,6 @@ class TeamSlider extends Component {
     var teams = [];
     teams.push(dotaTeam);
     teams.push(hearthstoneTeam);
-    //const teams = [{name : "Dota", players : ["Marek","Jake","Milk"]},{name : "Hearthstone", players : ["Bob","Grafiti"]}];
     
     var teamDivs = teams.map((team) =>
       <container id={team.name}>
