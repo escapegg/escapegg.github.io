@@ -1,0 +1,50 @@
+div.Sponsor {
+  display: -webkit-inline-box;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  width: 30%;
+}
+div.Sponsor img {
+  max-width: 100%;
+}
+div.Sponsor .popup {
+  padding-top: 10px;
+  color: white;
+  display: block;
+  width: 195px;
+  height: 195px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 80%;
+  background-color: #222;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+}
+div.Sponsors {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

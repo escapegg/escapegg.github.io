@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './css/Sponsors.css';
 import Nav from './Nav/Nav';
 import TeamSlider from './TeamSlider/TeamSlider';
 import Header from './Header';
