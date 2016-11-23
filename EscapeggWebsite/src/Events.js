@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Cal from './Calendar/Calendar'
 
 
 class Events extends Component {
@@ -8,7 +9,7 @@ class Events extends Component {
 
     return (
         <div id="Events">
-            <h> Events </h>
+            <Cal/>
         </div>
     );
 
